@@ -11,7 +11,12 @@ class shapeRectangle{
     //setter method
     void setlength(int l)
     {
-        length = l;
+        if(l>0){
+            length =l;
+        }
+        else
+           length=0;
+
     }
     void setwidth(int w )
     {
@@ -26,8 +31,12 @@ class shapeRectangle{
 public class get_set {
         public static void main(String args[]){
             shapeRectangle obj = new shapeRectangle();
-            
-
+            obj.setlength(10);
+            obj.setwidth(20);
+            System.out.println("length: "+ obj.getlength());
+            System.out.println("width: "+ obj.getwidth());
+            System.out.println("area of rectangle: "+ obj.area());
+        }
 
     }
-}
+    
